@@ -18,4 +18,4 @@ iCss offers a wide variety of iOS 11 styled cards. You can find examples in the 
 * Card with hover
 * On click animation
 
-![examples of iCss cards](github-images/example_cards.png)
+![examples of iCss cards](github-images/example_cards.jpg)
