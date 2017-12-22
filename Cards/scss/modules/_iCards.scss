@@ -1,0 +1,160 @@
+.icard {
+    margin-bottom: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .9375rem;
+    color: #fff;
+    text-decoration: none;
+    line-height: normal;
+    min-height: 27.5rem;
+    transition: all .2s ease-in-out;
+    -webkit-box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.37);
+    box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.37);
+    overflow: hidden;
+
+        &:active, {
+            transform: scale(.95);
+        }
+        &:not(:active) {
+            transform: scale(1);            
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &.hover {
+            &:hover {
+                transform: scale(.95);            
+            }
+        }
+
+        // White background
+        &.light {
+            color: #353535;
+
+            .icard-footer {
+                &.shadow {
+                    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                }
+
+                &.action {
+                    .icard-footer-btn {
+                        background-color: #007AFF;
+                        color: #f4f4f4;
+        
+                        &:hover:after {
+                            background-color: #007AFF;
+                        }
+                    }
+                }
+            }
+        }
+    
+
+    header {
+        padding: .975rem;
+
+        &.icard-header__highlight {
+            background-color: rgba(255, 255, 255, .85);
+            overflow: hidden;
+            position: relative;
+
+            .icard-sub-title,
+            .icard-title {
+                color: #303032;
+            }
+
+            .icard-image {
+                z-index: -1;
+                filter: blur(1rem);
+            }
+        }
+        
+        .icard-sub-title {
+            display: block;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: .7;
+        }
+
+        .icard-title {
+            display: block;
+            font-weight: 700;
+            font-size: 26px;
+        }
+    }
+
+    .icard-image,
+    .icard-video {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+    }
+
+    .icard-spotlight {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        line-height: .8;
+        padding: .975rem;
+    }
+
+    .icard-footer {
+        padding: .975rem;
+        
+        & > span {
+            display: block;
+            font-size: .875rem;
+        }
+
+        &.shadow {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+        }
+
+        &.action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > span {
+                padding-right: 10px;
+            }
+
+            .icard-footer-btn {
+                background-color: #f4f4f4;
+                color: #007AFF;
+                font-weight: 700;
+                font-size: 1rem;
+                white-space: nowrap;
+                padding: .3rem .9375rem;
+                border-radius: 20px;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 10;
+
+                &:hover:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #f4f4f4;
+                    opacity: .8;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
